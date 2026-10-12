@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@keyframes slide-up-sheet {
+	from {
+		transform: translateY(100%);
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}
+
+@layer utilities {
+	.animate-sheet-in {
+		animation: slide-up-sheet 240ms cubic-bezier(0.16, 1, 0.3, 1) both;
+	}
+}
