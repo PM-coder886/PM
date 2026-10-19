@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+blog-api/.dev.vars
+blog-api/.wrangler/
 
 # Editor directories and files
 .vscode/*

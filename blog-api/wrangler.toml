@@ -1,0 +1,23 @@
+name = "personal-blog-api"
+main = "src/index.ts"
+compatibility_date = "2026-10-13"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+CORS_ORIGIN = "http://localhost:5173"
+R2_PUBLIC_BASE_URL = "https://images.example.com"
+PUBLIC_SITE_URL = "http://localhost:5173"
+SITE_TITLE = "All In Blog"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "blog-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "blog-media"
+
+[triggers]
+crons = ["*/5 * * * *"]
